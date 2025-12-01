@@ -3,8 +3,9 @@ from dataclasses import dataclass, field
 from uuid import uuid4
 from openai import OpenAI
 
-from . import config
-from .rag_module import query_rag
+Líneas corregidas
+import config
+from rag_module import query_rag
 
 
 FAULT_KEYWORDS = [

@@ -4,11 +4,13 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from uuid import uuid4
 
-from . import config
-from .agents import AgentManager
-from .vision_module import analyze_image
-from .stt_module import transcribe_audio
-from .sql_agent import search_failures
+# main.py: REEMPLAZA las líneas que tienen 'from ....' con esto
+import config
+from agents import AgentManager
+from vision_module import analyze_image
+from stt_module import transcribe_audio
+from sql_agent import search_failures
+from ml_faults import compute_trends # Asegúrate de que esta esté en la lista si la usas
 from .ml_faults import compute_trends
 
 
@@ -31,6 +33,7 @@ class ChatRequest(BaseModel):
     conversation_id: Optional[str] = None
     language: Optional[str] = "es"
     user_id: Optional[int] = None
+
     company_id: Optional[int] = None
 
 

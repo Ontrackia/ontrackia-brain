@@ -29,3 +29,9 @@ if OPENAI_API_KEY:
     print(f"[CONFIG] API key loaded: {OPENAI_API_KEY[:15]}...")
 else:
     print("[CONFIG] WARNING: OPENAI_API_KEY not found!")
+
+    
+
+      
+
+    
